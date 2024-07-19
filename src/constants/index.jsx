@@ -13,7 +13,7 @@ import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
 
 export const navItems = [
-  { label: "Features", href: "#" },
+  { label: "Features", href: "#", id:"features" },
   { label: "Playground", href: "#" },
   { label: "Testimonials", href: "#" },
 ];

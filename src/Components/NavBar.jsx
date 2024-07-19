@@ -5,6 +5,23 @@ import { navItems } from "../constants";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+
+  const scrollToComponent = (
+    id,
+    event
+  ) => {
+    event.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleMailClick = () => {
+    const mailtoLink = `mailto:${email}`;
+    window.location.href = mailtoLink;
+  };
+
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
@@ -20,7 +37,10 @@ const Navbar = () => {
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li key={index}>
-                <a href={item.href}>{item.label}</a>
+                <button href={item.href} 
+                onClick={()=>{
+                  scrollToComponent(item.id)
+                }}>{item.label} </button>
               </li>
             ))}
           </ul>

@@ -1,4 +1,6 @@
 const Footer = () => {
+
+    
   return (
 
 
@@ -11,16 +13,18 @@ const Footer = () => {
             </a>
             <ul className="flex flex-wrap items-center mb-6 text-sm font-medium  sm:mb-0 text-black">
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">About</a>
+                    <button onClick={()=>{
+                        scrollToComponent("features")
+                    }} className="hover:underline me-4 md:me-6">About</button>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    <button href="#" className="hover:underline me-4 md:me-6">Privacy Policy</button>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Licensing</a>
+                    <button href="#" className="hover:underline me-4 md:me-6">Licensing</button>
                 </li>
                 <li>
-                    <a href="#" className="hover:underline">Contact</a>
+                    <button href="#" className="hover:underline">Contact</button>
                 </li>
             </ul>
         </div>
